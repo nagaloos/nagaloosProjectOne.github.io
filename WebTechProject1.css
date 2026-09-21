@@ -1,0 +1,251 @@
+/* ensure consistent styling */
+:root {
+  --primary-color: #0e4a97; /* main color for header and footer */
+  --secondary-color: #b5ddf8; /* color for section backgrounds */
+  --text-color: #000000; /* main text color */
+  --accent-color: #cc0070; /* color for interactive elements */
+  --tertiary-color: #fc98cf; /* additional color for other elements */
+  --spacing: 10px; /* consistent unit for padding and design */
+}
+
+body {
+  font-size: 14pt;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  padding: var(--spacing);
+  text-align: center;
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  align-self: stretch;
+  justify-self: center;
+}
+
+/* HEADER */
+header {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  margin: var(--spacing);
+  grid-area: header;
+}
+
+h1 {
+  padding-top: var(--spacing);
+  text-align: center;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 120px;
+  padding: var(--spacing);
+}
+a:link {
+  color: var(--accent-color);
+}
+a:visited {
+  color: var(--tertiary-color);
+}
+a:hover {
+  color: #FFFFFF;
+}
+
+/* ARTICLE */
+main {
+  grid-area: main;
+  display: grid;
+  align-self: stretch;
+  justify-self: center;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: grid;
+  align-self: stretch;
+  justify-self: center;
+}
+
+figcaption {
+  margin: var(--spacing);
+}
+
+/* TABLE */
+table {
+  width: 70%;
+  height: 100px;
+  border: solid 1pt var(--primary-color);
+  border-collapse: collapse;
+  text-align: center;
+  margin: var(--spacing) auto;
+}
+
+caption {
+  font-weight: bold;
+  padding: var(--spacing);
+}
+
+th {
+  padding: var(--spacing);
+  color: #FFFFFF;
+  background-color: var(--primary-color);
+}
+td {
+  padding: var(--spacing);
+  border: solid 1pt var(--primary-color);
+}
+
+/* FORM */
+fieldset {
+  border: 0pt;
+}
+
+form {
+  width: 60%;
+  background-color: var(--tertiary-color);
+  border: 0pt;
+  margin: var(--spacing);
+  padding: var(--spacing);
+  display: grid;
+  align-self: stretch;
+  justify-self: center;
+}
+
+legend {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+label {
+  font-weight: bold;
+  color: var(--text-color);
+}
+
+input {
+  font-size: 14pt;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 0;
+  margin: var(--spacing);
+  padding: var(--spacing);
+  border-radius: 2px;
+  width: 50%;
+}
+
+select {
+  font-size: 14pt;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 0;
+  margin: var(--spacing);
+  padding: var(--spacing);
+  border-radius: 2px;
+  width: 50%;
+}
+
+textarea {
+  font-size: 14pt;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 0;
+  margin: var(--spacing);
+  padding: var(--spacing);
+  border-radius: 2px;
+  width: 50%;
+  height: 200px;
+}
+
+input[type="submit"] {
+  font-size: 14pt;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 0;
+  margin: var(--spacing);
+  padding: var(--spacing);
+  border-radius: 2px;
+  width: 150px;
+  background-color: #FFFFFF;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--accent-color);
+}
+
+/* FOOTER */
+footer {
+  background-color: var(--primary-color);
+  color: #FFFFFF;
+  margin: var(--spacing);
+  padding: var(--spacing);
+  grid-area: footer;
+}
+
+/* CSS rules for large screens */
+@media only screen and (min-width: 1024px)
+{
+  /* My CSS automatically works for large screens, as I made this with those in mind first, but I'll put something in here so this breakpoint will be of use */
+  nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 120px;
+  padding: var(--spacing);
+  }
+  a:link {
+    color: var(--accent-color);
+  }
+  a:visited {
+    color: var(--tertiary-color);
+  }
+  a:hover {
+    color: #FFFFFF;
+  }
+}
+
+/* CSS rules for medium screens */
+@media only screen and (min-width: 769px) and (max-width: 1023px)
+{
+  nav {
+  gap: 60px;
+  }
+  form {
+    width: 75%;
+  }
+}
+
+/* CSS rules for small screens */
+@media only screen and (max-width: 768px)
+{
+  body {
+  font-size: 12pt;
+  padding: var(--spacing);
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-rows: auto 1fr auto;
+  }
+  nav {
+  gap: 30px;
+  flex-wrap: wrap;
+  }
+  table {
+    width: 90%;
+    margin: var(--spacing) auto;
+  }
+  form {
+  width: 80%;
+  margin: var(--spacing);
+  }
+  input {
+  width: 90%;
+  }
+  select {
+  width: 90%;
+  }
+  textarea {
+  width: 90%;
+  }
+}

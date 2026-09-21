@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Explore Downtown City</title>
+    <!-- Link to CSS file -->
+    <link rel="stylesheet" href="WebTechProject1.css">
+</head>
+<body>
+    <header>
+        <h1>Explore Downtown City</h1>
+        <nav>
+            <a href="#about">About</a>
+            <a href="#packages">Packages</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <!-- About -->
+        <section id="about">
+            <article>
+            <h2>About</h2>
+            <p>Downtown City is a wonderful place to take a trip to.</p>
+            <p>It's home to over 2 million people, but travelers are more than welcome to join our civilians in city life.
+            From museums to parks, there's something for everyone. We also regularly host fun events for all ages.</p>
+            <p>Additionally, our city is regarded as one of the most pet-friendly in the world.
+            We have numerous pet-friendly restaurants, hotels, and other establishments. Our city is the birthplace of the most famous pet fashion line in the world.</p>
+            <p>Come bring your family, friends, and pets for a great adventure!</p>
+            </article>
+        </section>
+        
+        <figure>
+            <img src="DowntownCity.jpg" alt="Downtown City" />
+            <figcaption>An overview of Downtown City. Doesn't it look vibrant?</figcaption>
+        </figure>
+
+        <!-- Packages -->
+        <section id="packages">
+            <table>
+            <caption><h2>Packages</h2></caption>
+            <tr>
+                <th>Name</th>
+                <th>Duration</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Drop-In</td>
+                <td>2 days and nights</td>
+                <td>$500</td>
+            </tr>
+            <tr>
+                <td>City Adventure</td>
+                <td>7 days and nights</td>
+                <td>$1750</td>
+            </tr>
+            <tr>
+                <td>Great Expedition</td>
+                <td>14 days and nights</td>
+                <td>$3500</td>
+            </tr>
+        </table>
+        <p>Our travel packages will help you save big while you enjoy the city's various sights.</p>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <form method="post" action="process.php">
+            <fieldset>
+                <legend><h2>Contact</h2></legend>
+                <p>
+                    <label>Name: </label>
+                    <input type="text" name="name" />
+                </p>
+                <p>
+                    <label>Email: </label>
+                    <input type="email" name="email" />
+                </p>
+                <p>
+                    <label>Package option: </label>
+                    <select name="package">
+                        <option>Drop-In</option>
+                        <option>City Adventure</option>
+                        <option>Great Expedition</option>
+                    </select>
+                </p>
+                <p>
+                    <label>Comments: </label>
+                    <textarea name="comments"></textarea>
+                </p>
+                <input type="submit" />
+            </fieldset>
+        </form>
+        </section>
+    </main>
+
+    <footer>&copy; 2026 Hub Travel Group</footer>
+</body>
+</html>
